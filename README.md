@@ -1,4 +1,4 @@
-# Pollpad — $POLL
+# Poolpad — $POOL
 
 Static one-page site, no build step. Settings at the top of index.html (CONTRACT, TWITTER, BUY_URL, WC_PROJECT_ID).
 

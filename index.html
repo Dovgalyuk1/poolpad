@@ -59,6 +59,7 @@ h1,h2,h3,h4{font-family:var(--h);letter-spacing:-.02em;line-height:1.05;font-wei
 .btn:disabled{opacity:.6;cursor:default;transform:none}
 
 /* header */
+.hd-w.btn.acc{background:var(--panel2);color:var(--ink);box-shadow:none;border-color:var(--line3)}
 .hd{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(14,16,21,.72);border-bottom:1px solid var(--line)}
 .hd .wrap{display:flex;align-items:center;gap:22px;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:-.01em}
@@ -451,7 +452,7 @@ section.blk{padding:84px 0;border-top:1px solid var(--line);position:relative}
     <div class="hd-r">
       <button class="sw" id="sndBtn" aria-pressed="false"><i></i>SOUND</button>
       <a class="btn sm ghost xTop xLink" id="xBtn" href="#" target="_blank" rel="noopener">Follow on X</a>
-      <a class="btn sm soon buyTop buyLink" id="buyBtn" href="#">Buy $POLL <span class="tag">SOON</span></a>
+      <a class="btn sm acc buyTop buyLink" id="buyBtn" href="#">Buy $POLL</a>
       <button class="btn sm acc hd-w" id="wBtn"><span class="wl">Connect wallet</span></button>
     </div>
   </div>
@@ -467,7 +468,8 @@ section.blk{padding:84px 0;border-top:1px solid var(--line);position:relative}
       <h1>Post a poll.<br>Every option <em>becomes a coin.</em></h1>
       <p class="lead">Tag <b>@pollpadbot</b> on a poll — <b>$CATS vs $DOGS</b>, <b>$YES vs $NO</b>, up to four options. Each option launches as its own coin on Robinhood Chain and every trade on any of them feeds <b>one shared vault</b>. When the poll closes, the vault buys the coin that won the vote. Traders bet on the outcome. Voters decide where the money goes.</p>
       <div class="cta">
-        <a class="btn acc" href="#desk">Open the poll desk</a>
+        <a class="btn acc buyLink" href="#">Buy $POLL</a>
+        <a class="btn ghost" href="#desk">Open the poll desk</a>
         <a class="btn ghost xLink" href="#" target="_blank" rel="noopener">Follow @pollpadbot</a>
       </div>
       <div class="chips">
@@ -631,7 +633,7 @@ section.blk{padding:84px 0;border-top:1px solid var(--line);position:relative}
         <div class="tok-bal" id="tokBal">Connect a wallet on Robinhood Chain to see your $POLL.</div>
         <div class="btns">
           <button class="btn ghost" id="wBtn3"><span class="wl3">Connect wallet</span></button>
-          <a class="btn acc soon buyLink" href="#">Buy $POLL <span class="tag">SOON</span></a>
+          <a class="btn acc buyLink" href="#">Buy $POLL</a>
         </div>
         <div class="kv2">
           <div><span>Reserve an author handle</span><b>free · no gas</b></div>
@@ -705,7 +707,7 @@ if(TW){ document.querySelectorAll('#xBtn,.xLink').forEach(function(a){ a.href=TW
 else{ document.querySelectorAll('#xBtn,.xLink').forEach(function(a){ a.removeAttribute('target'); a.addEventListener('click',function(e){ e.preventDefault(); window.toast('@pollpadbot goes live with the first poll.'); }); }); }
 document.querySelectorAll('#buyBtn,.buyLink').forEach(function(buy){
   if(BUY){ buy.href=BUY; buy.target='_blank'; buy.rel='noopener'; buy.classList.remove('soon'); var t=buy.querySelector('.tag'); if(t) t.remove(); }
-  else{ buy.addEventListener('click',function(e){ e.preventDefault(); window.toast('$POLL is not trading yet. The link appears here at launch.'); }); }
+  else{ buy.addEventListener('click',function(e){ e.preventDefault(); window.toast('$POLL goes live soon — the buy link is added here at launch.'); }); }
 });
 
 /* ---------- sound ---------- */
